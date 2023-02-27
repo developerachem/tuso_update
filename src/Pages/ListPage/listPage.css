@@ -1,0 +1,267 @@
+.list_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  align-items: center;
+  border-bottom: 1px solid #00000027;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: #fff;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.137);
+}
+.list_header_left {
+  width: 65%;
+}
+
+.list_header_left .list_header_left_button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  display: none;
+}
+.header_selected_box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header_selected_box button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #0a73eb;
+}
+.header_selected_box button:first-child svg {
+  font-size: 20px;
+}
+.header_selected_box button strong {
+  font-weight: 400;
+  font-size: 14px;
+}
+.list_header_left .list_header_left_button button {
+  display: flex;
+  align-items: center;
+}
+.list_header_left .list_header_left_button .stared {
+  color: black;
+  font-size: 15px;
+}
+.list_header_left .list_header_left_button .all_ticket {
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.5s;
+  border: 1px solid transparent;
+  padding: 4px;
+  border-radius: 5px;
+}
+.list_header_left .list_header_left_button .header_filter {
+  font-size: 16px;
+  transition: 0.5s;
+  border: 1px solid transparent;
+  padding: 4px;
+  border-radius: 5px;
+}
+.list_header_left .list_header_left_button .reload {
+  font-size: 16px;
+  transition: 0.5s;
+  border: 1px solid transparent;
+  padding: 4px;
+  border-radius: 5px;
+}
+.list_header_left .list_header_left_button .header_filter:hover,
+.list_header_left .list_header_left_button .all_ticket:hover,
+.list_header_left .list_header_left_button .reload:hover {
+  border: 1px solid #b6aeae;
+}
+.list_header_right {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: end;
+}
+.list_header_right button {
+  font-size: 14px;
+}
+.list_header_right .total_count {
+  color: #0a73eb;
+}
+.list_header_right .stared,
+.list_header_right .classic_view,
+.list_header_right .header_short,
+.list_header_right .header_info {
+  border: 1px solid #ddddddbb;
+  padding: 6px 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+.list_header_right .stared:hover,
+.list_header_right .classic_view:hover,
+.list_header_right .header_short:hover,
+.list_header_right .header_info:hover {
+  border-color: #8d8c8c;
+}
+
+/* List Page CSS */
+.list_page_body {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 10px; */
+  /* padding-left: 20px; */
+  margin-top: 62px;
+}
+
+/* .list_table_body {
+    position: relative;
+} */
+.list_table_body button svg {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.list_table {
+  width: 82%;
+}
+
+.list_table ul {
+  width: 100%;
+  display: block;
+}
+.list_table ul li {
+  display: grid;
+  grid-template-columns: 0.5fr 7fr 2fr repeat(4, 0.5fr);
+  padding: 20px;
+  transition: 0.5s;
+  align-items: center;
+  border-bottom: 1px solid #0000000a;
+}
+
+.list_table ul li:hover {
+  background-color: #4b494917;
+}
+
+.list_input {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  font-size: 15px;
+  color: #2c334d;
+}
+
+.list_table ul li:hover .list_input_icon_check {
+  display: block;
+}
+.list_table ul li:hover .list_input_icon {
+  display: none;
+}
+
+.list_input_icon_check {
+  display: none;
+}
+
+.list_table_body .list_info_button {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.action_button a {
+  color: #2c334d;
+}
+
+.list_info_button p {
+  font-size: 13px;
+  color: #2c334d;
+}
+.list_info_button a {
+  font-size: 14px;
+  color: #2c334d;
+  transition: 0.5s;
+}
+
+.list_info_button a:hover {
+  color: #0a73eb;
+}
+
+.list_action_button {
+  background-color: #f708083b;
+  padding: 5px 15px;
+  color: rgb(233, 38, 38);
+  border-radius: 7px;
+  position: relative;
+}
+
+.list_action_hover {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.list_action_button:hover .list_action_hover {
+  visibility: visible;
+  opacity: 1;
+  top: 110%;
+}
+
+.list_assigned_member {
+  height: 40px;
+  width: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2c334d;
+  position: relative;
+}
+
+.list_assign_hover {
+  position: absolute;
+  top: 130%;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.list_assigned_member:hover .list_assign_hover {
+  top: 110%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.action_button a:hover .list_hover {
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+}
+.list_hover {
+  position: relative;
+  top: 10px;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Side Bar */
+.list_page_sidebar {
+  width: 18%;
+  background-color: #f5f7f9;
+  height: 93.4vh;
+  overflow-y: scroll;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}

@@ -1,0 +1,33 @@
+.list_sidebar_component{
+    padding: 20px;
+}
+.list_sidebar_component h5{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.list_sidebar_component form label{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: roboto;
+}
+
+.list_sidebar_component form label select{
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: rgb(71, 71, 70);
+}
+
+.list_sidebar_component form button{
+    width: 100%;
+    background-color: #1c3e59;
+    padding: 10px 0;
+    color: #fff;
+    border-radius: 3px;
+}
